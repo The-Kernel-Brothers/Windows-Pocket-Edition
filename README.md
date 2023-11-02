@@ -1,4 +1,4 @@
-# Windows Pocked Edition
+# Windows Pocket Edition
 Windows PE based DOS
 Made with Batch
 
