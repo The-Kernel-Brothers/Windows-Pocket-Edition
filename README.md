@@ -4,4 +4,4 @@ Made with Batch
 
 Note: Still in Alpha stages
 
-Ver Alpha 0.1
+Ver Alpha 0.0.1
