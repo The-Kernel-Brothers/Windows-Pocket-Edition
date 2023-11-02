@@ -26,8 +26,9 @@ jobs:
 
       - name: Build BAT to EXE application
         run: |
-          "%REPO_PATH%\bin\bat_to_exe\bat_to_exe.exe" /bat "%REPO_PATH%\os.bat" /exe "%REPO_PATH%\build\Windows-Pocket-Edition-amd64.exe" /x64 /icon "%REPO_PATH%\src\logo.ico" /uac-admin /productversion "${{ env.RELEASE_VERSION }}" /internalname "Windows: Pocket Edition 64-bit"
-          "%REPO_PATH%\bin\bat_to_exe\bat_to_exe.exe" /bat "%REPO_PATH%\os.bat" /exe "%REPO_PATH%\build\Windows-Pocket-Edition-i386.exe" /icon "%REPO_PATH%\src\logo.ico" /uac-admin /productversion "${{ env.RELEASE_VERSION }}" /internalname "Windows: Pocket Edition 32-bit"
+          "%REPO_PATH%\bin\bat_to_exe\bat_to_exe.exe" /bat "%REPO_PATH%\line.bat" /exe "%REPO_PATH%\build\Windows-Pocket-Edition-amd64.exe" /x64 /icon "%REPO_PATH%\src\logo.ico" /uac-admin /productversion "${{ env.RELEASE_VERSION }}" /internalname "Windows: Pocket Edition 64-bit"
+          "%REPO_PATH%\bin\bat_to_exe\bat_to_exe.exe" /bat "%REPO_PATH%\line.bat" /exe "%REPO_PATH%\build\Windows-Pocket-Edition-i386.exe" /icon "%REPO_PATH%\src\logo.ico" /uac-admin /productversion "${{ env.RELEASE_VERSION }}" /internalname "Windows: Pocket Edition 32-bit"
+          
         shell: cmd
       
       - name: Upload artifact
