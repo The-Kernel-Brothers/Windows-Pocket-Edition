@@ -29,10 +29,12 @@ goto plist
 :plist
 echo.
 echo 1) Notepad
-echo 2) Return to Start List
+echo 2) Task Manager
+echo 3) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-if %poption%==2 exit /b
+if %poption%==3 exit /b
+if %poption%==2 call :taskmgrcls
 goto plist
 exit /b
 
@@ -42,3 +44,12 @@ goto notepadapp
 
 :notepadapp
 notepad.exe
+goto plist
+
+:taskmgrcls
+cls
+goto taskmgr
+
+:taskmgr
+taskmgr
+goto plist
