@@ -10,7 +10,7 @@ echo 2) Programs list
 set /p soption=Select an option from the Start List: 
 if %soption%==1 call :sdowncls
 if %soption%==2 call :plistcls
-echo Invalid option, please try again.
+echo.
 goto start
 
 :sdowncls
@@ -29,9 +29,10 @@ goto plist
 :plist
 echo.
 echo 1) Notepad
+echo 2) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-echo Invalid program, please try again.
+if %poption%==2 exit /b
 goto plist
 exit /b
 
@@ -40,5 +41,4 @@ cls
 goto notepadapp
 
 :notepadapp
-echo this works
-pause
+notepad.exe
