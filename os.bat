@@ -7,9 +7,11 @@ cls
 echo ....Start List....
 echo 1) Shutdown
 echo 2) Programs list
+echo 3) About WPE
 set /p soption=Select an option from the Start List: 
 if %soption%==1 call :sdown
 if %soption%==2 call :plistcls
+if %soption%==3 call :aboutwpe
 echo.
 goto start
 
@@ -50,3 +52,12 @@ goto taskmgr
 :taskmgr
 taskmgr
 goto plist
+
+:aboutwpe
+cls
+echo Windows Pocket Edition - Version Alpha 0.0.1 (Build: A0) - Made by The Kernel Brothers
+pause
+cls
+goto start
+
+#Windows Pocket Edition - Version Alpha 0.0.1 (Build: A0) - Made by The Kernel Brothers
