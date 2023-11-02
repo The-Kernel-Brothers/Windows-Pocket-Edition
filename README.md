@@ -4,4 +4,4 @@ Made with Batch
 
 Note: Still in Alpha stages
 
-Ver Alpha 0.0.1
+Windows Pocket Edition - Version Alpha 0.0.1 (Build: A0) - Made by The Kernel Brothers
