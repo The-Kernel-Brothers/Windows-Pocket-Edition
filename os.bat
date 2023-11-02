@@ -132,9 +132,9 @@ goto plist
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.1 (Build: A3) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A3) - Made by The Kernel Brothers
 pause
 cls
 goto start
 
-#Windows Pocket Edition - Version Alpha 0.0.1 (Build: A3) - Made by The Kernel Brothers
+#Windows Pocket Edition - Version Alpha 0.0.2 (Build: A3) - Made by The Kernel Brothers
