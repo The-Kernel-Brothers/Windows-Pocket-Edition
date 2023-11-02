@@ -8,19 +8,13 @@ echo ....Start List....
 echo 1) Shutdown
 echo 2) Programs list
 set /p soption=Select an option from the Start List: 
-if %soption%==1 call :sdowncls
+if %soption%==1 call :sdown
 if %soption%==2 call :plistcls
 echo.
 goto start
 
-:sdowncls
-cls
-goto sdown
-
 :sdown
-echo.
-echo this works fine sdown
-exit /b
+exit
 
 :plistcls
 cls
