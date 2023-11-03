@@ -84,10 +84,12 @@ echo.
 echo 1) Change terminal colors
 echo 2) WiFi information
 echo 3) Exit Control Panel
+echo 4) Auto start WPE
 set /p coption=Choose a setting to change: 
 if %coption%==1 call :scolor
 if %coption%==2 goto wifi
 if %coption%==3 goto rstart
+if %coption%==4 goto autostart
 goto cpanel
 
 :wifi
@@ -121,6 +123,12 @@ goto cpanel
 :rstart
 cls
 goto start
+
+:autostart
+cls
+copy ".\line.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+echo Restart your computer and see the magic!
+goto cpanel
 
 :plist
 echo 1) Notepad
