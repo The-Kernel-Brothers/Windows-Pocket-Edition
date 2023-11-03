@@ -141,7 +141,14 @@ goto plist
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A4) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A5) - Made by The Kernel Brothers
+echo.
 pause
+echo.
+set /p dcord=Join our Discord? (y/n): 
+if %dcord%==y call :discord
 cls
 goto start
+
+:discord
+start iexplore.exe https://discord.gg/ZPhV9kT3gq
