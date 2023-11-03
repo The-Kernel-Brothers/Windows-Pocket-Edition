@@ -151,7 +151,7 @@ goto plist
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A6) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: A7) - Made by The Kernel Brothers
 echo.
 pause
 echo.
@@ -161,4 +161,4 @@ cls
 goto start
 
 :discord
-start iexplore.exe https://discord.gg/ZPhV9kT3gq
+start https://discord.gg/ZPhV9kT3gq
