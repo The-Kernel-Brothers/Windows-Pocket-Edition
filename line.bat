@@ -39,12 +39,21 @@ echo ....Tools....
 echo 1) Ping a website
 echo 2) Ping google.com
 echo 3) DiskPart
-echo 4) Go Back
+echo 4) Command Prompt
+echo 5) Go Back
 set /p toption=Select a tool: 
 if %toption%==1 call :pingsite
 if %toption%==2 call :pingg
 if %toption%==3 call :diskp
-if %toption%==4 goto rstart
+if %toption%==4 call :cmd
+if %toption%==5 goto rstart
+goto tools
+
+:cmd
+cls
+echo Make sure to type 'exit' when you are done!
+pause
+conhost
 goto tools
 
 :pingsite
@@ -132,7 +141,7 @@ goto plist
 
 :aboutwpe
 cls
-echo Windows Pocket Edition Standalone - Version Alpha 0.0.2 (Build: A3) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A4) - Made by The Kernel Brothers
 pause
 cls
 goto start
