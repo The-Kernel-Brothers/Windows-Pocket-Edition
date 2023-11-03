@@ -82,10 +82,20 @@ echo ....Control Panel....
 echo Adjust your computer's settings.
 echo.
 echo 1) Change terminal colors
-echo 2) Exit Control Panel
+echo 2) WiFi information
+echo 3) Exit Control Panel
 set /p coption=Choose a setting to change: 
 if %coption%==1 call :scolor
-if %coption%==2 goto rstart
+if %coption%==2 goto wifi
+if %coption%==3 goto rstart
+goto cpanel
+
+:wifi
+cls
+set /p ssid=Enter the SSID of your WiFi network in quotations: 
+Netsh wlan show profile name=%ssid% key=clear
+pause
+cls
 goto cpanel
 
 :scolor
@@ -159,7 +169,7 @@ goto plist
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A5) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.2 (Build: A6) - Made by The Kernel Brothers
 pause
 cls
 goto start
