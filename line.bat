@@ -84,12 +84,10 @@ echo.
 echo 1) Change terminal colors
 echo 2) WiFi information
 echo 3) Exit Control Panel
-echo 4) Auto start WPE
 set /p coption=Choose a setting to change: 
 if %coption%==1 call :scolor
 if %coption%==2 goto wifi
 if %coption%==3 goto rstart
-if %coption%==4 goto autostart
 goto cpanel
 
 :wifi
@@ -124,22 +122,32 @@ goto cpanel
 cls
 goto start
 
-:autostart
-cls
-copy ".\line.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
-echo Restart your computer and see the magic!
-goto cpanel
-
 :plist
 echo 1) Notepad
 echo 2) Task Manager
-echo 3) Return to Start List
+echo 3) Paint.Net
+echo 4) Microsoft Paint 95
+echo 5) Games [DIR]
+echo 6) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-if %poption%==3 goto rstart
+if %poption%==6 goto rstart
 if %poption%==2 call :taskmgrcls
+if %poption%==3 call :paintnet
+if %poption%==4 call :mspaint
+if %poption%==5 call :glist
 goto plist
 exit /b
+
+:glist
+echo.
+echo Games [DIR]
+echo 1) The Game Of Life
+echo 2) Close folder
+set /p goption=Select a game from the Games List: 
+if %goption%==1 call :tgol
+if %goption%==2 goto plistcls
+goto glist
 
 :notepadappcls
 cls
@@ -157,9 +165,44 @@ goto taskmgr
 taskmgr
 goto plist
 
+:tgol
+cls
+echo ....Game Of Life!....
+echo.
+echo Character 1: David
+echo Character 2: Lisa
+echo Character 3: Archie
+set /p chargol=Enter the name of the character of your choice! 
+if %chargol%==1 call :David
+if %chargol%==2 call :Lisa
+if %chargol%==3 call :Archie
+cls
+echo.
+echo Please enter the name of the character of your choice.
+goto tgol
+
+:David
+cls
+echo Lady voice: David
+pause
+echo.
+echo Lady voice: Daaaaaaviiiiiid
+pause
+echo.
+echo Lady voice: Oh look he is waking up!
+echo Man voice: Ah he is so handsome!
+pause
+cls
+echo Doctor: (to you) Welcome to the world! (to the lady and man) Congratulations on your newborn baby!
+echo Dad: Thank you very much doctor!
+echo Doctor: You can be dismissed from the hospital anytime you want.
+echo Mum: Thank you!
+pause
+cls
+
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: A7) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: A8) - Made by The Kernel Brothers
 echo.
 pause
 echo.
