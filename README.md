@@ -6,6 +6,11 @@ Note: Still in Alpha stages
 
 JOIN THE KERNEL BROTHERS DISCORD: https://discord.gg/ZPhV9kT3gq
 
+
+Windows Pocket Edition - Version Alpha 0.0.3 (Build: A8) - Made by The Kernel Brothers
+
+Windows Pocket Edition Standalone - Version Alpha 0.0.3 (Build: A8) - Made by The Kernel Brothers
+
 # How to build your own WPE ISO
 
 1) Download os_wpe.bat from the code
@@ -24,8 +29,3 @@ JOIN THE KERNEL BROTHERS DISCORD: https://discord.gg/ZPhV9kT3gq
 14) Click Next and follow the steps to complete the ISO
 
 NOTE: Some features (Like custom apps) may not be available.
-
-
-Windows Pocket Edition - Version Alpha 0.0.3 (Build: A7) - Made by The Kernel Brothers
-
-Windows Pocket Edition Standalone - Version Alpha 0.0.3 (Build: A7) - Made by The Kernel Brothers
