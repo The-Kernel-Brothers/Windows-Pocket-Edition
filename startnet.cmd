@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF)
+title Windows Pocket Edition - Version Alpha 0.0.4 (Build: AF)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
