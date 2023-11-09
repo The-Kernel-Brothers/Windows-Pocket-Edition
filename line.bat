@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Alpha 0.0.3 (Build: AA)
+title Windows Pocket Edition - Version Alpha 0.0.4 (Build: AF)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
@@ -7,16 +7,18 @@ cls
 :start
 echo ....Start List....
 echo 1) Shutdown
-echo 2) Programs list
-echo 3) Tools
-echo 4) Control Panel
-echo 5) About WPE
+echo 2) File Manager
+echo 3) Programs list
+echo 4) Tools
+echo 5) Control Panel
+echo 6) About WPE
 set /p soption=Select an option from the Start List: 
 if %soption%==1 call :sdown
-if %soption%==2 call :plistcls
-if %soption%==3 call :toolscls
-if %soption%==4 call :cpanelcls
-if %soption%==5 call :aboutwpe
+if %soption%==3 call :plistcls
+if %soption%==4 call :toolscls
+if %soption%==5 call :cpanelcls
+if %soption%==6 call :aboutwpe
+if %soption%==2 call :explorer
 echo.
 goto start
 
@@ -35,19 +37,26 @@ goto tools
 cls
 goto cpanel
 
+:explorer
+start fm.exe
+cls
+goto start
+
 :tools
 echo ....Tools....
 echo 1) Ping a website
 echo 2) Ping google.com
 echo 3) DiskPart
 echo 4) Command Prompt
-echo 5) Go Back
+echo 5) Registry Editor
+echo 6) Go Back
 set /p toption=Select a tool: 
 if %toption%==1 call :pingsite
 if %toption%==2 call :pingg
 if %toption%==3 call :diskp
 if %toption%==4 call :cmd
-if %toption%==5 goto rstart
+if %toption%==6 goto rstart
+if %toption%==5 call :reg
 goto tools
 
 :cmd
@@ -55,6 +64,12 @@ cls
 echo Make sure to type 'exit' when you are done!
 pause
 conhost
+cls
+goto tools
+
+:reg
+cls
+regedit
 goto tools
 
 :pingsite
@@ -83,20 +98,10 @@ echo ....Control Panel....
 echo Adjust your computer's settings.
 echo.
 echo 1) Change terminal colors
-echo 2) WiFi information
-echo 3) Exit Control Panel
+echo 2) Exit Control Panel
 set /p coption=Choose a setting to change: 
 if %coption%==1 call :scolor
-if %coption%==2 goto wifi
-if %coption%==3 goto rstart
-goto cpanel
-
-:wifi
-cls
-set /p ssid=Enter the SSID of your WiFi network in quotations: 
-Netsh wlan show profile name=%ssid% key=clear
-pause
-cls
+if %coption%==2 goto rstart
 goto cpanel
 
 :scolor
@@ -126,15 +131,22 @@ goto start
 :plist
 echo 1) Notepad
 echo 2) Task Manager
-echo 3) Games [DIR]
-echo 4) Return to Start List
+echo 3) Paint
+echo 4) Games [DIR]
+echo 5) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-if %poption%==4 goto rstart
+if %poption%==5 goto rstart
 if %poption%==2 call :taskmgrcls
-if %poption%==3 call :glist
+if %poption%==4 call :glist
+if %poption%==3 call:paint
 goto plist
 exit /b
+
+:paint
+cls
+mspaint
+goto plist
 
 :glist
 echo.
@@ -170,9 +182,9 @@ echo Character 1: David
 echo Character 2: Lisa
 echo Character 3: Archie
 set /p chargol=Enter the name of the character of your choice! 
-if %chargol%==1 call :David
-if %chargol%==2 call :Lisa
-if %chargol%==3 call :Archie
+if %chargol%==David call :David
+if %chargol%==Lisa call :Lisa
+if %chargol%==Archie call :Archie
 cls
 echo.
 echo Please enter the name of the character of your choice.
@@ -199,15 +211,9 @@ cls
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: AA) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF) - Made by The Kernel Brothers
 echo.
 echo Credits: Tjari
 pause
-echo.
-set /p dcord=Join our Discord? (y/n): 
-if %dcord%==y call :discord
 cls
 goto start
-
-:discord
-start https://discord.gg/ZPhV9kT3gq

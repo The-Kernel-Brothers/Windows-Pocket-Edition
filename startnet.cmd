@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF)
+title Windows Pocket Edition - Version Alpha 0.0.4 (Build: AF)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
@@ -182,9 +182,9 @@ echo Character 1: David
 echo Character 2: Lisa
 echo Character 3: Archie
 set /p chargol=Enter the name of the character of your choice! 
-if %chargol%==1 call :David
-if %chargol%==2 call :Lisa
-if %chargol%==3 call :Archie
+if %chargol%==David call :David
+if %chargol%==Lisa call :Lisa
+if %chargol%==Archie call :Archie
 cls
 echo.
 echo Please enter the name of the character of your choice.
