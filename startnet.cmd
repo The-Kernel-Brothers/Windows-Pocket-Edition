@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Alpha 0.0.3 (Build: AD)
+title Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
@@ -48,13 +48,15 @@ echo 1) Ping a website
 echo 2) Ping google.com
 echo 3) DiskPart
 echo 4) Command Prompt
-echo 5) Go Back
+echo 5) Registry Editor
+echo 6) Go Back
 set /p toption=Select a tool: 
 if %toption%==1 call :pingsite
 if %toption%==2 call :pingg
 if %toption%==3 call :diskp
 if %toption%==4 call :cmd
-if %toption%==5 goto rstart
+if %toption%==6 goto rstart
+if %toption%==5 call :reg
 goto tools
 
 :cmd
@@ -62,6 +64,12 @@ cls
 echo Make sure to type 'exit' when you are done!
 pause
 conhost
+cls
+goto tools
+
+:reg
+cls
+regedit
 goto tools
 
 :pingsite
@@ -123,15 +131,22 @@ goto start
 :plist
 echo 1) Notepad
 echo 2) Task Manager
-echo 3) Games [DIR]
-echo 4) Return to Start List
+echo 3) Paint
+echo 4) Games [DIR]
+echo 5) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-if %poption%==4 goto rstart
+if %poption%==5 goto rstart
 if %poption%==2 call :taskmgrcls
-if %poption%==3 call :glist
+if %poption%==4 call :glist
+if %poption%==3 call:paint
 goto plist
 exit /b
+
+:paint
+cls
+mspaint
+goto plist
 
 :glist
 echo.
@@ -196,7 +211,7 @@ cls
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: AD) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF) - Made by The Kernel Brothers
 echo.
 echo Credits: Tjari
 pause
