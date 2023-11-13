@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Alpha 0.0.4 (Build: AF)
+title Windows Pocket Edition - Version Beta 0.1.0 (Build: B0)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
@@ -132,16 +132,26 @@ goto start
 echo 1) Notepad
 echo 2) Task Manager
 echo 3) Paint
-echo 4) Games [DIR]
-echo 5) Return to Start List
+echo 4) Calculator
+echo 5) Games [DIR]
+echo 6) Return to Start List
 set /p poption=Select a program from the Programs List: 
 if %poption%==1 call :notepadappcls
-if %poption%==5 goto rstart
+if %poption%==6 goto rstart
 if %poption%==2 call :taskmgrcls
-if %poption%==4 call :glist
+if %poption%==4 call :calccls
+if %poption%==5 call :glist
 if %poption%==3 call:paint
 goto plist
 exit /b
+
+:calccls
+cls
+goto calc
+
+:calc
+calc.exe
+goto plist
 
 :paint
 cls
@@ -211,7 +221,7 @@ cls
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Alpha 0.0.3 (Build: AF) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Beta 0.1.0 (Build: B0) - Made by The Kernel Brothers
 echo.
 echo Credits: Tjari
 pause
