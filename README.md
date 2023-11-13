@@ -7,9 +7,9 @@ Note: Still in Alpha stages
 JOIN THE KERNEL BROTHERS DISCORD: https://discord.gg/ZPhV9kT3gq
 
 
-Windows Pocket Edition - Version Alpha 0.0.4 (Build: AF) - Made by The Kernel Brothers
+Windows Pocket Edition - Version Beta 0.1.0 (Build: B0) - Made by The Kernel Brothers
 
-Windows Pocket Edition Standalone - Version Alpha 0.0.4 (Build: AA) - Made by The Kernel Brothers
+Windows Pocket Edition Standalone - Version Beta 0.1.0 (Build: AB) - Made by The Kernel Brothers
 
 Credits: Tjari
 
@@ -31,4 +31,4 @@ Credits: Tjari
 14) Select Yes to All if it asks to replace files
 15) Click Next and follow the steps to complete the ISO
 
-NOTE: Some features (Like custom apps) may not be available at the moment as we are in Alpha.
+NOTE: Some features (Like custom apps) may not be available.
