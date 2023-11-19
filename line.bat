@@ -211,7 +211,7 @@ cls
 cls
 echo Windows Pocket Edition - Version Beta 0.1.0 (Build: AB) - Made by The Kernel Brothers
 echo.
-echo Credits: Tjari
+echo Contributors: Tjari
 pause
 echo.
 set /p dcord=Join our Discord? (y/n): 

@@ -1,5 +1,5 @@
 @echo off
-title Windows Pocket Edition - Version Beta 0.1.0 (Build: B0)
+title Windows Pocket Edition - Version Beta 0.1.1 (Build: B1)
 echo ....Welcome to Windows Pocket Edition....
 pause
 cls
@@ -49,14 +49,30 @@ echo 2) Ping google.com
 echo 3) DiskPart
 echo 4) Command Prompt
 echo 5) Registry Editor
-echo 6) Go Back
+echo 6) 7zip
+echo 7) NTPWEdit
+echo 8) Go Back
 set /p toption=Select a tool: 
 if %toption%==1 call :pingsite
 if %toption%==2 call :pingg
 if %toption%==3 call :diskp
 if %toption%==4 call :cmd
-if %toption%==6 goto rstart
+if %toption%==8 goto rstart
+if %toption%==6 call :7zip
 if %toption%==5 call :reg
+if %toption%==7 call :ntp
+goto tools
+
+:ntp
+cls
+ntp
+goto tools
+
+:7zip
+cls
+cd "7-Zip"
+7zFM
+cd..
 goto tools
 
 :cmd
@@ -141,7 +157,7 @@ if %poption%==6 goto rstart
 if %poption%==2 call :taskmgrcls
 if %poption%==4 call :calccls
 if %poption%==5 call :glist
-if %poption%==3 call:paint
+if %poption%==3 call :paint
 goto plist
 exit /b
 
@@ -221,9 +237,9 @@ cls
 
 :aboutwpe
 cls
-echo Windows Pocket Edition - Version Beta 0.1.0 (Build: B0) - Made by The Kernel Brothers
+echo Windows Pocket Edition - Version Beta 0.1.1 (Build: B1) - Made by The Kernel Brothers
 echo.
-echo Credits: Tjari
+echo Contributors: Tjari
 pause
 cls
 goto start
