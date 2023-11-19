@@ -7,11 +7,11 @@ Note: Still in Alpha stages
 JOIN THE KERNEL BROTHERS DISCORD: https://discord.gg/ZPhV9kT3gq
 
 
-Windows Pocket Edition - Version Beta 0.1.0 (Build: B0) - Made by The Kernel Brothers
+Windows Pocket Edition - Version Beta 0.1.1 (Build: B1) - Made by The Kernel Brothers
 
 Windows Pocket Edition Standalone - Version Beta 0.1.0 (Build: AB) - Made by The Kernel Brothers
 
-Credits: Tjari
+Contributors: Tjari
 
 # How to build your own WPE ISO
 
